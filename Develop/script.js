@@ -18,7 +18,7 @@ function whatTime() {
 
         if (thisHour > currentTime) {
             $(this).addClass("future");
-           
+        
         }else if (thisHour === currentTime){
             $(this).addClass("present");
             
@@ -27,16 +27,17 @@ function whatTime() {
             
         }
     })
+   
 };
 whatTime();
 //When I click the save button it saves it in local storage
 //Posibly jQuery event listener in a function and then save time/text in local storage
 //When I refresh the page the saved events are still there
-    $(".saveBtn").on("click", function(){
-        var text = $(this).description();
-        console.log(text);
-    })
-
+$(".saveBtn").on("click", function() {
+    var userInput = $(this).siblings(".description").val();
+    var timeInput = $(this).parent().attr("id");
+    localStorage.setItem(timeInput, userInput);
+});
 
 
 
