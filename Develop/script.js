@@ -1,12 +1,7 @@
-var hour9 = hour9;
-
 //grabs from moment.js
 var currentDay = moment().format('dddd MMMM do YYYY');
 // calls the current day moment variable
 $("#currentDay").text(currentDay);
-
-
-
 
 //When I view time blocks they need to be color-coded for past,present,future
 function whatTime() {
@@ -18,6 +13,7 @@ function whatTime() {
     //need to loop over time blocks and check with conditional if < or = if, else if, if
     $(".block").each(function(){
         var thisHour = parseInt($(this).attr("id"));
+        console.log(thisHour);
 
         if (thisHour > currentTime) {
             $(this).addClass("future");
