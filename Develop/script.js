@@ -31,14 +31,24 @@ function whatTime() {
 };
 whatTime();
 //When I click the save button it saves it in local storage
-//Posibly jQuery event listener in a function and then save time/text in local storage
-//When I refresh the page the saved events are still there
+//Posibly jQuery event listener in a function and then save timeInput/userInput in local storage
+
 $(".saveBtn").on("click", function() {
     var userInput = $(this).siblings(".description").val();
     var timeInput = $(this).parent().attr("id");
     localStorage.setItem(timeInput, userInput);
 });
-
+//When I refresh the page the saved events are still there
+$("#8 .description").val(localStorage.getItem("8"));
+$("#9 .description").val(localStorage.getItem("9"));
+$("#10 .description").val(localStorage.getItem("10"));
+$("#11 .description").val(localStorage.getItem("11"));
+$("#12 .description").val(localStorage.getItem("12"));
+$("#1 .description").val(localStorage.getItem("1"));
+$("#2 .description").val(localStorage.getItem("2"));
+$("#3 .description").val(localStorage.getItem("3"));
+$("#4 .description").val(localStorage.getItem("4"));
+$("#5 .description").val(localStorage.getItem("5"));
 
 
 
