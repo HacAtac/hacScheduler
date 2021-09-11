@@ -41,7 +41,7 @@ var userSaves;
 if (JSON.parse(localStorage.getItem("userInput"))) {
     userSaves = JSON.parse(localStorage.getItem("userInput"))
     console.log("userInput",Object.keys(userSaves));
-    
+//object of array
 }else {
     userSaves = {
         eight,
