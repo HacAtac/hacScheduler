@@ -3,6 +3,8 @@ var currentDay = moment().format('dddd MMMM do YYYY');
 // calls the current day moment variable
 $("#currentDay").text(currentDay);
 
+
+
 //When I view time blocks they need to be color-coded for past,present,future
 function whatTime() {
     //var to hold the current hour using moment.js to retrieve
@@ -32,7 +34,7 @@ function whatTime() {
 whatTime();
 
 
-// When i refresh page input is still there
+
 
 //listen to all save buttons
 var userSaves;
@@ -55,6 +57,36 @@ if (JSON.parse(localStorage.getItem("userInput"))) {
     }
 }
 
+// When i refresh page input is still there
+var field8 = document.querySelector("#eight");
+field8.value = userSaves.eight;
+
+var field9 = document.querySelector("#nine");
+field9.value = userSaves.nine;
+
+var field10 = document.querySelector("#ten");
+field10.value = userSaves.ten;
+
+var field11 = document.querySelector("#eleven");
+field11.value = userSaves.eleven;
+
+var field12 = document.querySelector("#twelve");
+field12.value = userSaves.twelve;
+
+var field13 = document.querySelector("#thirteen");
+field13.value = userSaves.thirteen;
+
+var field14 = document.querySelector("#fourteen");
+field14.value = userSaves.fourteen;
+
+var field15 = document.querySelector("#fifteen");
+field15.value = userSaves.fifteen;
+
+var field16 = document.querySelector("#sixteen");
+field16.value = userSaves.sixteen;
+
+var field17 = document.querySelector("#seventeen");
+field17.value = userSaves.seventeen;
 
     //event listener for #saveBtn on click
 $(".saveBtn").on("click", function(event){
