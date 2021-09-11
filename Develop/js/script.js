@@ -44,21 +44,22 @@ if (JSON.parse(localStorage.getItem("userInput"))) {
 //object of array
 }else {
     userSaves = {
-        eight,
-        nine,
-        ten,
-        eleven,
-        twelve,
-        thirteen,
-        fourteen,
-        fifteen,
-        sixteen,
-        seventeen,
+        eight:"",
+        nine:"",
+        ten:"",
+        eleven:"",
+        twelve:"",
+        thirteen:"",
+        fourteen:"",
+        fifteen:"",
+        sixteen:"",
+        seventeen:"",
     }
 }
 
 // When i refresh page input is still there
 var field8 = document.querySelector("#eight");
+//console.log("userSaves.eight is ", userSaves.eight);
 field8.value = userSaves.eight;
 
 var field9 = document.querySelector("#nine");
